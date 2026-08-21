@@ -264,15 +264,23 @@ header{
 
 .roster{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:clamp(1.5rem,3.5vw,2.75rem);
-  max-width:920px;margin:2.5rem 0 0;
+  gap:clamp(1.5rem,3vw,2.25rem);
+  margin:3rem 0 0;
 }
+.roster-row{
+  border:1px solid var(--rule);border-radius:5px;overflow:hidden;
+  background:var(--paper-deep);
+  transition:border-color .2s ease,transform .2s ease;
+}
+.roster-row:hover{border-color:var(--orange);transform:translateY(-3px)}
+.roster-row .portrait{border:0;border-radius:0;aspect-ratio:4/5}
+.roster-row .caption{padding:1.4rem 1.5rem 1.6rem;border-top:1px solid var(--rule)}
 .roster-row h2{
   font-family:"Archivo",sans-serif;font-weight:700;
-  font-size:1.2rem;letter-spacing:-.015em;
-  line-height:1.15;margin:.9rem 0 .2rem;
+  font-size:clamp(1.25rem,2.2vw,1.55rem);letter-spacing:-.015em;
+  line-height:1.15;margin:0 0 .35rem;
 }
-.roster-row .lede{max-width:none;font-size:.9rem;margin-top:.5rem}
+.roster-row .contact-link{margin-top:1rem;font-size:.8rem}
 
 /* ---------- footer ---------- */
 footer{background:var(--paper-deep);border-top:1px solid var(--rule);padding:3.5rem 0 2.5rem}
