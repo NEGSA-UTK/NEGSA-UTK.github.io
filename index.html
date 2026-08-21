@@ -51,27 +51,24 @@
         <svg id="orbit-svg" viewBox="0 0 400 400" aria-hidden="true">
           <!-- rings hold still; the electrons travel around them -->
           <g>
-            <ellipse id="ring1" cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".55"/>
+            <ellipse cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".55"/>
             <circle r="7" fill="var(--orange)">
-              <animateMotion dur="7s" repeatCount="indefinite">
-                <mpath href="#ring1"/>
-              </animateMotion>
+              <animateMotion dur="7s" repeatCount="indefinite"
+                path="M 10,200 A 190,74 0 1,0 390,200 A 190,74 0 1,0 10,200 Z"/>
             </circle>
           </g>
           <g transform="rotate(60 200 200)">
-            <ellipse id="ring2" cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".4"/>
+            <ellipse cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".4"/>
             <circle r="6" fill="var(--orange)">
-              <animateMotion dur="9s" begin="-3s" repeatCount="indefinite">
-                <mpath href="#ring2"/>
-              </animateMotion>
+              <animateMotion dur="9s" begin="-3s" repeatCount="indefinite"
+                path="M 10,200 A 190,74 0 1,0 390,200 A 190,74 0 1,0 10,200 Z"/>
             </circle>
           </g>
           <g transform="rotate(120 200 200)">
-            <ellipse id="ring3" cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".28"/>
+            <ellipse cx="200" cy="200" rx="190" ry="74" fill="none" stroke="var(--orange)" stroke-width="1.5" opacity=".28"/>
             <circle r="5" fill="var(--orange)">
-              <animateMotion dur="11s" begin="-6s" repeatCount="indefinite">
-                <mpath href="#ring3"/>
-              </animateMotion>
+              <animateMotion dur="11s" begin="-6s" repeatCount="indefinite"
+                path="M 10,200 A 190,74 0 1,0 390,200 A 190,74 0 1,0 10,200 Z"/>
             </circle>
           </g>
         </svg>

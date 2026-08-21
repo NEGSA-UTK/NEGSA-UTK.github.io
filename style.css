@@ -262,18 +262,17 @@ header{
 }
 .contact-link:hover{color:var(--orange-deep)}
 
-.roster{border-top:1px solid var(--rule);margin-top:2.5rem}
-.roster-row{
-  display:grid;grid-template-columns:150px 1fr;
-  gap:clamp(1.5rem,4vw,2.75rem);align-items:center;
-  padding:1.75rem 0;border-bottom:1px solid var(--rule);
+.roster{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.5rem,3.5vw,2.75rem);
+  max-width:920px;margin:2.5rem 0 0;
 }
 .roster-row h2{
   font-family:"Archivo",sans-serif;font-weight:700;
-  font-size:clamp(1.3rem,2.6vw,1.7rem);letter-spacing:-.015em;
-  line-height:1.1;margin:.3rem 0 .45rem;
+  font-size:1.2rem;letter-spacing:-.015em;
+  line-height:1.15;margin:.9rem 0 .2rem;
 }
-.roster-row .lede{max-width:52ch;font-size:.95rem}
+.roster-row .lede{max-width:none;font-size:.9rem;margin-top:.5rem}
 
 /* ---------- footer ---------- */
 footer{background:var(--paper-deep);border-top:1px solid var(--rule);padding:3.5rem 0 2.5rem}
@@ -305,7 +304,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange-deep);outlin
   .orbit{order:-1;max-width:280px}
   .foot-grid{grid-template-columns:1fr 1fr}
   .stats-grid{grid-template-columns:1fr;gap:1.25rem}
-  .roster-row{grid-template-columns:110px 1fr;gap:1.25rem}
+  .roster{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
 }
 @media (max-width:760px){
   .navtoggle{
