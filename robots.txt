@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://negsa-utk.github.io/sitemap.xml
