@@ -219,11 +219,11 @@ header{
 }
 .merch-item:hover{border-color:var(--orange);transform:translateY(-3px)}
 .merch-item img{
-  width:100%;aspect-ratio:300/287;object-fit:cover;
+  width:100%;aspect-ratio:300/340;object-fit:cover;
   background:#fff;border-bottom:1px solid var(--rule);
 }
-.merch-item .merch-body{padding:1.15rem 1.25rem 1.4rem}
-.merch-item b{display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.05rem}
+.merch-item .merch-body{padding:1.3rem 1.4rem 1.55rem}
+.merch-item b{display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.15rem}
 .merch-item span{
   display:block;margin-top:.3rem;font-family:"IBM Plex Mono",monospace;
   font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);
@@ -292,14 +292,18 @@ header{
 .advisor-card{
   display:flex;align-items:center;gap:1.4rem;margin-top:1.1rem;
   border:1px solid var(--rule);border-radius:5px;background:var(--paper-deep);
-  padding:1.4rem 1.75rem;max-width:420px;
+  padding:1.4rem 1.75rem;max-width:430px;
   transition:border-color .2s ease;
 }
 .advisor-card:hover{border-color:var(--orange)}
-.advisor-card .portrait{
-  width:74px;height:74px;flex-shrink:0;aspect-ratio:1;border-radius:50%;
+.advisor-icon{
+  width:54px;height:54px;flex-shrink:0;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--paper);border:1px solid var(--rule);
+  color:var(--orange);
 }
-.advisor-card .portrait::after{font-size:1.6rem}
+.advisor-icon svg{width:27px;height:27px;display:block}
+.advisor-card .contact-link{margin-top:.55rem;font-size:.8rem}
 .advisor-card h2{
   font-family:"Archivo",sans-serif;font-weight:700;
   font-size:1.3rem;letter-spacing:-.015em;margin:0 0 .25rem;
