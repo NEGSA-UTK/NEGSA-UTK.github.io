@@ -209,15 +209,20 @@ header{
 /* ---------- merch ---------- */
 .merch-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
 .merch-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:1rem;margin-top:2.5rem;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1rem,2vw,1.5rem);margin-top:2.5rem;max-width:880px;
 }
 .merch-item{
-  border:1px solid var(--rule);border-radius:4px;
-  padding:1.5rem 1.25rem;background:var(--paper-deep);
+  border:1px solid var(--rule);border-radius:4px;overflow:hidden;
+  background:var(--paper-deep);
   transition:border-color .2s ease,transform .2s ease;
 }
 .merch-item:hover{border-color:var(--orange);transform:translateY(-3px)}
+.merch-item img{
+  width:100%;aspect-ratio:300/287;object-fit:cover;
+  background:#fff;border-bottom:1px solid var(--rule);
+}
+.merch-item .merch-body{padding:1.15rem 1.25rem 1.4rem}
 .merch-item b{display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.05rem}
 .merch-item span{
   display:block;margin-top:.3rem;font-family:"IBM Plex Mono",monospace;
@@ -313,6 +318,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange-deep);outlin
   .foot-grid{grid-template-columns:1fr 1fr}
   .stats-grid{grid-template-columns:1fr;gap:1.25rem}
   .roster{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+  .merch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:760px){
   .navtoggle{
