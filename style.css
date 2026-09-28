@@ -383,3 +383,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange-deep);outlin
   .event-tag{justify-self:start}
   .foot-grid{grid-template-columns:1fr}
 }
+/* ---------- Meeting Minutes ---------- */
+.minutes-block {margin-left: 4rem; margin-right: 4rem; margin-bottom: 6rem; margin-top: 4rem;}
