@@ -295,6 +295,12 @@ header{
   padding:1.4rem 1.75rem;max-width:430px;
   transition:border-color .2s ease;
 }
+.advisor-card,
+.hof-doc-list .doc-link {
+    width: 100%;
+    max-width: 430px;
+    height: 160px;
+}
 .advisor-card:hover{border-color:var(--orange)}
 .advisor-icon{
   width:54px;height:54px;flex-shrink:0;border-radius:50%;
@@ -385,3 +391,128 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange-deep);outlin
 }
 /* ---------- Meeting Minutes ---------- */
 .minutes-block {margin-left: 4rem; margin-right: 4rem; margin-bottom: 6rem; margin-top: 4rem;}
+/* ---------- Hall of Fame ---------- */
+.hof-hero {
+    padding: clamp(3rem,7vw,5rem) 0 clamp(2rem,4vw,3rem);
+}
+
+.hof-hero h1 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem,6vw,4.2rem);
+    line-height: .98;
+    letter-spacing: -.035em;
+    margin: .8rem 0 1.1rem;
+}
+
+.hof-block {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--rule);
+}
+
+.hof-doc-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 430px;
+    margin-top: 1.1rem;
+}
+
+.hof-list {
+    display: grid;
+    gap: 0;
+    margin: 0 0 5rem;
+}
+
+.hof-person {
+    display: grid;
+    grid-template-columns: 1fr 180px auto;
+    gap: 1.75rem;
+    align-items: center;
+
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+
+    transition: padding-left .2s ease;
+}
+
+.hof-person:hover {
+    padding-left: .85rem;
+}
+
+.hof-year {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--orange-deep);
+}
+
+.hof-person h2 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -.01em;
+}
+
+.hof-link {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .66rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .35rem .7rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink-soft);
+}
+
+.hof-link:hover {
+    border-color: var(--orange);
+    color: var(--orange-deep);
+}
+.hof-position {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .66rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    padding: .35rem .7rem;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+
+    justify-self: start;
+    white-space: nowrap;
+}
+.hof-position.president {
+    color: var(--orange-deep);
+}
+
+.hof-position.vice-president {
+    color: var(--ink-soft);
+}
+
+.hof-position.treasurer {
+    color: #3F7D58;
+}
+
+.hof-position.secretary {
+    color: #3E6F9E;
+}
+.hof-position.tech {
+    color: #8A5A9B;
+}
+
+@media (max-width: 760px) {
+    .hof-person {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+    }
+
+    .hof-position,
+    .hof-link {
+        justify-self: start;
+    }
+}
+
