@@ -503,7 +503,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--orange-deep);outlin
 .hof-position.tech {
     color: #8A5A9B;
 }
-
+.hof-position.Public-Relations-Chair {
+    color: #fffb0f;
+}
+.hof-position.Outreach-Coordinator {
+    color: #b90e16;
+}
 @media (max-width: 760px) {
     .hof-person {
         grid-template-columns: 1fr;
